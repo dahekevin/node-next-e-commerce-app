@@ -3,11 +3,22 @@ Implementação Simples de uma Loja Online (Login, Cadastro de Usuários, Produt
 
 ## 🚀 Tecnologias Utilizadas
 
+### BACKEND
 - **ExpressJS** - Framework Node.js para aplicações server-side
 - **Prisma** - ORM moderno para TypeScript e Node.js
 - **PostgreSQL** - Banco de dados relacional
 - **JWT** - Autenticação e autorização
 - **TypeScript** - Linguagem de programação
+- **Multer** - Middleware para o Node.js para processamento de uploads de arquivos (imagens, documentos, etc.).
+- **Bcrypt** - Biblioteca para hashing de senhas.
+- **Nodemailer** - Biblioteca para envio de e-mails.
+
+### FRONTEND
+- **NextJS** - Framework React para criação de aplicações web.
+- **ReactJS** - Biblioteca JavaScript para construção de interfaces de usuário.
+- **Axios** - Cliente HTTP usado para realizar requisições assíncronas ao backend (API).
+- **TailwindCSS** - Framework CSS.
+- **JavaScript** - Linguagem de programação.
 
 ## 📋 Pré-requisitos
 
@@ -16,6 +27,9 @@ Antes de começar, certifique-se de ter instalado:
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 - [Git](https://git-scm.com/)
+
+## Banco de Dados
+Crie um banco no PostgreSQL antes de rodar o projeto:
 
 - ## 🛠️ Instalação e Configuração
 
@@ -38,7 +52,7 @@ Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 
 ```env
 # Database
-DATABASE_URL=""
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/minha_api_db"
 
 # JWT
 JWT_SECRET="seu-jwt-secret-aqui"
