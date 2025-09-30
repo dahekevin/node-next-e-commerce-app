@@ -1,4 +1,4 @@
-# Projeto MarketPlace FullStack
+# Projeto Marketplace FullStack
 Implementação Simples de uma Loja Online (Login, Cadastro de Usuários, Produtos, Carrinho de Compras)
 
 ## 🚀 Tecnologias Utilizadas
@@ -69,6 +69,30 @@ HOST_USER="chaya.russel29@ethereal.email"
 HOST_PASS="148muzCgn2G46JxxUz"
 ```
 
+### 4. Definindo bando de dados
+
+No explorador do PosgresSQL:
+- Vá em:
+```
+Servers
+   └── PostgreSQl
+           └── Databases
+```
+- Clique com o botão direto e crie o seu Database (Defina um nome. Ex: `minha_api_db`)
+- Criar um usuário `postgres` com senha `postgres`
+
+### 5. Execute as migrações do Prisma
+
+```bash
+npx prisma migrate dev --name migracao_inicial
+```
+
+### 6. (Opcional) Execute o seed para dados iniciais
+
+```bash
+npx prisma db seed
+```
+
 ## 📊 Banco de Dados
 
 ### Comandos do Prisma
@@ -85,6 +109,12 @@ npx prisma generate
 
 # Aplicar migrações pendentes
 npx prisma migrate deploy
+
+# Puxa as informações do Database para atualizar o prisma caso esse esteja desatualizado 
+npx prisma db pull
+
+# Envia as informações do prisma para atualizar o Database no postgres caso esse esteja desatualizado 
+npx prisma db push
 ```
 
 ### Modo de Desenvolvimento
