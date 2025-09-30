@@ -20,8 +20,6 @@ Aplicação desenvolvida com NextJS e NodeJS para um sistema de markeplace (Logi
 - **TailwindCSS** - Framework CSS.
 - **JavaScript** - Linguagem de programação.
 
-
-
 ## 📋 Pré-requisitos
 
 Antes de começar, certifique-se de ter instalado:
@@ -151,8 +149,10 @@ marketplace/api/
 
 ## 🤓 <CONFIGURAÇÃO DO FRONTEND></>
 
+### 1. Abra a pasta frontend
+
 ```bash
-cd marketplace/api
+cd marketplace/frontend
 ```
 
 ### 2. Instale as dependências
