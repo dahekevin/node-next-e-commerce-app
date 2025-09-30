@@ -1,5 +1,5 @@
 # Projeto Marketplace FullStack
-Implementação Simples de uma Loja Online (Login, Cadastro de Usuários, Produtos, Carrinho de Compras)
+Aplicação desenvolvida com NextJS e NodeJS para um sistema de markeplace (Login, Cadastro de Usuários, Produtos, Carrinho de Compras)
 
 ## 🚀 Tecnologias Utilizadas
 
