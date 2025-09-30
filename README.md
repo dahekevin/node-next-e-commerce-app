@@ -3,7 +3,7 @@ Aplicação desenvolvida com NextJS e NodeJS para um sistema de markeplace (Logi
 
 ## 🚀 Tecnologias Utilizadas
 
-### BACKEND
+#### BACKEND
 - **ExpressJS** - Framework Node.js para aplicações server-side
 - **Prisma** - ORM moderno para TypeScript e Node.js
 - **PostgreSQL** - Banco de dados relacional
@@ -13,12 +13,14 @@ Aplicação desenvolvida com NextJS e NodeJS para um sistema de markeplace (Logi
 - **Bcrypt** - Biblioteca para hashing de senhas.
 - **Nodemailer** - Biblioteca para envio de e-mails.
 
-### FRONTEND
+#### FRONTEND
 - **NextJS** - Framework React para criação de aplicações web.
 - **ReactJS** - Biblioteca JavaScript para construção de interfaces de usuário.
 - **Axios** - Cliente HTTP usado para realizar requisições assíncronas ao backend (API).
 - **TailwindCSS** - Framework CSS.
 - **JavaScript** - Linguagem de programação.
+
+
 
 ## 📋 Pré-requisitos
 
@@ -27,6 +29,8 @@ Antes de começar, certifique-se de ter instalado:
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 - [Git](https://git-scm.com/)
+
+## 🖥️ <CONFIGURAÇÃO DO BACKEND></>
 
 ## Banco de Dados
 Crie um banco no PostgreSQL antes de rodar o projeto:
@@ -130,6 +134,8 @@ O projeto utiliza as seguintes tabelas principais:
 - **products** - Produtos do marketplace
 - **carts** - Carrinhos de compra dos usuários
 - **product_in_carts** - Relação entre produtos e carrinhos
+
+## 🤓 <CONFIGURAÇÃO DO FRONTEND></>
 
 ## 📄 Licença
 
