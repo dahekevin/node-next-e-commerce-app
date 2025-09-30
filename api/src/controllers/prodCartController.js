@@ -5,7 +5,8 @@ const prisma = new PrismaClient()
 export const addProductToCart = async (req, res) => {
     try {
         const userId = req.user.id
-        const { productId, quantity } = req.body
+        const { productId, qnt } = req.body
+        const quantity = parseInt(qnt)
 
         const userCart = await prisma.cart.findUnique({
             where: { userId },
@@ -26,7 +27,7 @@ export const addProductToCart = async (req, res) => {
 
         if (existingProducts) {
             updatedCartProduct = await prisma.productInCart.update({
-                where: { productId_cartId: productId, cartId },
+                where: { productId_cartId: { productId, cartId } },
                 data: { quantity: existingProducts.quantity + quantity }
             })
         } else {
@@ -61,10 +62,15 @@ export const getProductsFromCart = async (req, res) => {
         const cartId = userCart.id
 
         const prod = await prisma.productInCart.findMany({
-            where: { cartId }
+            where: { cartId },
+            include: {
+                product: true
+            }
         })
 
-        return res.status(201).json({ message: 'Produtos encontrados:', prod })
+        const products = prod.map(item => item.product)
+
+        return res.status(201).json({ message: 'Produtos encontrados:', products })
     } catch (error) {
         console.error(error);
         return res.status(404).json({ message: 'Produto não encontrado.' });

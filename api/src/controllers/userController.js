@@ -1,4 +1,5 @@
 import { PrismaClient } from '../../generated/prisma/client.js'
+import { mail } from '../service/email.service.js'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
@@ -9,7 +10,7 @@ export const createUser = async (req, res) => {
         const { name, email, password, phone, role, cpf } = req.body;
 
         const existingUser = await prisma.user.findUnique({
-            where: { email }
+            where: { email, cpf }
         })
 
         if (existingUser) {
@@ -18,7 +19,7 @@ export const createUser = async (req, res) => {
 
         const hashPassword = await bcrypt.hash(password, 10)
 
-        await prisma.$transaction(async (tx) => {
+        const user = await prisma.$transaction(async (tx) => {
             const newUser = await tx.user.create({
                 data: {
                     name,
@@ -35,7 +36,7 @@ export const createUser = async (req, res) => {
             })
         })
 
-        res.status(201).json({ message: 'Cadastro Realizado!' })
+        res.status(201).json({ message: 'Cadastro Realizado!', user })
 
     } catch (error) {
         res.status(500).json({ message: 'Erro no servidor, tente novamente.', error })
@@ -93,9 +94,14 @@ export const userLogin = async (req, res) => {
             { expiresIn: '7d' }
         )
 
+        const role = user_db.role
+
+        mail();
+
         return res.status(201).json({
             message: 'Login realizado com sucesso!',
-            token
+            token,
+            role
         })
 
     } catch (error) {
