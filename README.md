@@ -68,3 +68,39 @@ HOST_PORT="587"
 HOST_USER="chaya.russel29@ethereal.email"
 HOST_PASS="148muzCgn2G46JxxUz"
 ```
+
+## 📊 Banco de Dados
+
+### Comandos do Prisma
+
+```bash
+# Visualizar o banco de dados no Prisma Studio
+npx prisma studio
+
+# Resetar o banco de dados
+npx prisma migrate reset
+
+# Gerar o cliente Prisma
+npx prisma generate
+
+# Aplicar migrações pendentes
+npx prisma migrate deploy
+```
+
+### Modo de Desenvolvimento
+
+```bash
+npm run dev
+```
+
+### Estrutura do Banco
+
+O projeto utiliza as seguintes tabelas principais:
+- **users** - Usuários do sistema (ADMIN/USER)
+- **products** - Produtos do marketplace
+- **carts** - Carrinhos de compra dos usuários
+- **product_in_carts** - Relação entre produtos e carrinhos
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
