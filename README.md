@@ -121,7 +121,7 @@ npx prisma db pull
 npx prisma db push
 ```
 
-### Modo de Desenvolvimento
+## 🚀 Como Executar o Projeto
 
 ```bash
 npm run dev
@@ -135,7 +135,58 @@ O projeto utiliza as seguintes tabelas principais:
 - **carts** - Carrinhos de compra dos usuários
 - **product_in_carts** - Relação entre produtos e carrinhos
 
+### Porta já em uso
+
+Se a porta 3001 estiver em uso, altere a variável `PORT` no arquivo `.env` ou pare o processo que está usando a porta.
+
+## 📝 Estrutura do Projeto
+
+```
+marketplace/api/
+├── src/                # Código fonte da aplicação
+├── prisma/             # Schema e migrações do banco
+├── uploads/            # Arquivos enviados
+└── package.json        # Dependências e scripts
+```
+
 ## 🤓 <CONFIGURAÇÃO DO FRONTEND></>
+
+```bash
+cd marketplace/api
+```
+
+### 2. Instale as dependências
+
+```bash
+npm install
+```
+
+### Scripts Diponíveis
+
+```bash
+# Roda o projeto em modo desenvolvimento (hot reload)
+npm run dev
+
+# Compila o projeto para produção
+npm run build
+
+# Inicia o projeto em modo produção
+npm run start
+
+# Roda o ESLint para verificar padrões de código
+npm run lint
+```
+
+## 📝 Estrutura do Projeto
+
+```
+marketplace/frontend/
+├── app/                # Código fonte da aplicação
+├── components/         # Código do cabeçalho e rodapé
+├── public/             # Arquivos públicos
+├── service/            # COnfiguração do Axios
+└── package.json        # Dependências e scripts
+```
 
 ## 📄 Licença
 
