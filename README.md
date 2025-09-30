@@ -155,12 +155,15 @@ cd marketplace/frontend
 npm install
 ```
 
+## 🚀 Como Executar o Projeto
+
+```bash
+npm run dev
+```
+
 ### Scripts Diponíveis
 
 ```bash
-# Roda o projeto em modo desenvolvimento (hot reload)
-npm run dev
-
 # Compila o projeto para produção
 npm run build
 
