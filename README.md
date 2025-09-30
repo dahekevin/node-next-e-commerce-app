@@ -89,12 +89,6 @@ Servers
 npx prisma migrate dev --name migracao_inicial
 ```
 
-### 6. (Opcional) Execute o seed para dados iniciais
-
-```bash
-npx prisma db seed
-```
-
 ## 📊 Banco de Dados
 
 ### Comandos do Prisma
